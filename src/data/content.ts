@@ -152,7 +152,7 @@ export const songs = [
   { id: 'falling', title: 'Falling in Love', file: '/music/falling-in-love.mp3' },
   { id: 'guns', title: 'Guns for Hands', file: '/music/guns-for-hands.mp3' },
   { id: 'fade', title: 'Fade Into You', file: '/music/fade-into-you.mp3' },
-  { id: 'casio', title: 'Casio', file: '/music/casio.mp3' },
+  { id: 'jungle', title: 'Jungle', file: '/music/jungle.mp3' },
   { id: 'japan', title: 'Made in Japan', file: '/music/made-in-japan.mp3' },
   { id: 'futuro', title: 'Ella viene del futuro', file: '/music/ella-viene-del-futuro.mp3' },
 ] as const

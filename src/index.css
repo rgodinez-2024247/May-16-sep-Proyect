@@ -117,6 +117,14 @@ p {
     linear-gradient(165deg, #f9e2ea 0%, #f4c9d6 42%, #efb7c8 78%, #e8a8bc 100%);
 }
 
+.bg-crumpled {
+  background-color: #f4b8c8;
+  background-image: url('/images/bg-crumpled-pink.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .scroll-dots {
   position: absolute;
   inset: -20% 0;

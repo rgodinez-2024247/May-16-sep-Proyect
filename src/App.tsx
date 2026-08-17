@@ -3,14 +3,12 @@ import { Background } from './components/Background'
 import { CharacterGifts, GiftModal } from './components/CharacterGifts'
 import { Entrance } from './components/Entrance'
 import { MusicPlayer } from './components/MusicPlayer'
-import { BIRTHDAY, type CharacterGift } from './data/content'
-import { useCountdown } from './hooks/useCountdown'
+import { type CharacterGift } from './data/content'
 
 export default function App() {
   const [opened, setOpened] = useState(false)
   const [showVeil, setShowVeil] = useState(false)
   const [activeGift, setActiveGift] = useState<CharacterGift | null>(null)
-  const countdown = useCountdown(BIRTHDAY)
 
   const handleOpen = () => {
     setOpened(true)
@@ -32,12 +30,6 @@ export default function App() {
 
       {opened && (
         <div className="app-shell">
-          <header className="top-bar">
-            <p className="countdown">
-              <strong>{countdown.label}</strong>
-            </p>
-          </header>
-
           <section className="hero cute-hero">
             <img
               className="hero-deco"
@@ -55,14 +47,12 @@ export default function App() {
               <span>♥</span>
               <span>♥</span>
             </div>
-            <p>Marjorie, te mereces flores en tu día especial.</p>
           </section>
 
           <CharacterGifts onOpen={setActiveGift} />
 
           <section className="section closing" id="cierre">
-            <blockquote>Te quiero, mi niña. Feliz 23, Marjorie.</blockquote>
-            <p className="sign">Si quieres, dime qué regalo te gustó más.</p>
+            <blockquote>Te quiero mi niña. Felices 23 May.</blockquote>
           </section>
 
           <MusicPlayer enabled={opened} />
