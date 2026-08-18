@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+tmp-frames/
+public/images/*-raw.png
+

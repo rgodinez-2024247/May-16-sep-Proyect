@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import {
   characters,
   cats,
@@ -13,13 +13,23 @@ type Props = {
 }
 
 export function GiftModal({ gift, onClose }: Props) {
+  const [phase, setPhase] = useState<'idle' | 'intro' | 'open'>('idle')
+
   useEffect(() => {
-    if (!gift) return
+    if (!gift) {
+      setPhase('idle')
+      return
+    }
+    setPhase('intro')
+    const t = window.setTimeout(() => setPhase('open'), 80)
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose()
     }
     window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
+    return () => {
+      window.clearTimeout(t)
+      window.removeEventListener('keydown', onKey)
+    }
   }, [gift, onClose])
 
   if (!gift) return null
@@ -28,6 +38,43 @@ export function GiftModal({ gift, onClose }: Props) {
     gift.kind === 'letter'
       ? letters.find((l) => l.id === gift.letterId)
       : undefined
+
+  if (gift.kind === 'letter' && letter) {
+    return (
+      <div
+        className={`letter-reveal ${phase === 'open' ? 'is-open' : ''}`}
+        role="dialog"
+        aria-modal="true"
+        aria-label={gift.giftLabel}
+        onClick={onClose}
+      >
+        <div className="letter-stage" onClick={(e) => e.stopPropagation()}>
+          <img
+            className="letter-flowers letter-flowers-top"
+            src="/images/letter-flowers-top.png"
+            alt=""
+            aria-hidden
+          />
+          <img
+            className="letter-flowers letter-flowers-bot"
+            src="/images/letter-flowers-bot.png"
+            alt=""
+            aria-hidden
+          />
+
+          <article className="letter-paper">
+            <p className="letter-paper-from">{gift.name} te trae…</p>
+            <h3 className="letter-paper-title">{letter.title}</h3>
+            <div className="letter-paper-body">{letter.body}</div>
+          </article>
+
+          <button type="button" className="letter-close soft" onClick={onClose}>
+            Cerrar carta
+          </button>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div
@@ -45,10 +92,6 @@ export function GiftModal({ gift, onClose }: Props) {
             <h3>{gift.giftLabel}</h3>
           </div>
         </div>
-
-        {gift.kind === 'letter' && letter && (
-          <div className="letter-body">{letter.body}</div>
-        )}
 
         {gift.kind === 'paintings' && (
           <div className="gift-paint-grid">
