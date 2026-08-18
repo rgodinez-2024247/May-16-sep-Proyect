@@ -28,3 +28,39 @@ Coloca los archivos en `public/music/` con estos nombres:
 npm run build
 npm run preview
 ```
+```mermaid
+sequenceDiagram
+    participant U as Usuario
+    participant F as Frontend
+    participant A as API
+    participant D as Base de datos
+
+    U->>F: Envía formulario
+    F->>A: POST /api/users
+    A->>D: INSERT INTO users
+    D-->>A: OK
+    A-->>F: 201 Created
+    F-->>U: Muestra confirmación
+```
+```mermaid
+flowchart TD
+    A[Push a main] --> B[GitHub Actions]
+    B --> C[Instalar dependencias]
+    C --> D[Ejecutar tests]
+    D --> E{Tests pasan?}
+    E -->|Sí| F[Build]
+    E -->|No| G[Notificar fallo]
+    F --> H[Deploy a producción]
+    G --> I[Crear issue]
+```
+
+```mermaid
+flowchart TB
+    subgraph Frontend
+        A[React] --> B[Next.js]
+    end
+    subgraph Backend
+        C[Node.js] --> D[PostgreSQL]
+    end
+    B --> C
+```
