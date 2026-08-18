@@ -96,28 +96,38 @@ export function MusicPlayer({ enabled }: Props) {
 
   return (
     <div className="music-dock" role="region" aria-label="Reproductor de música">
-      <div className="music-top">
-        <div className="music-meta">
-          <strong>{track.title}</strong>
-          <span>
-            {cursor + 1} / {songs.length}
-          </span>
-        </div>
-        <div className="music-controls">
-          <button type="button" onClick={() => skip(-1)} aria-label="Anterior">
-            ‹
-          </button>
-          <button type="button" onClick={() => void toggle()} aria-label={playing ? 'Pausa' : 'Play'}>
-            {playing ? '❚❚' : '▶'}
-          </button>
-          <button type="button" onClick={() => skip(1)} aria-label="Siguiente">
-            ›
-          </button>
-        </div>
+      <div className="music-note" aria-hidden>
+        ♪
       </div>
-      {!available && (
-        <p className="music-hint">La música se activará cuando estén los archivos en /public/music</p>
-      )}
+      <div className="music-body">
+        <div className="music-top">
+          <div className="music-meta">
+            <strong>{track.title}</strong>
+            <span>
+              {cursor + 1} / {songs.length}
+            </span>
+          </div>
+          <div className="music-controls">
+            <button type="button" onClick={() => skip(-1)} aria-label="Anterior">
+              ‹
+            </button>
+            <button
+              type="button"
+              className="music-play"
+              onClick={() => void toggle()}
+              aria-label={playing ? 'Pausa' : 'Play'}
+            >
+              {playing ? '❚❚' : '▶'}
+            </button>
+            <button type="button" onClick={() => skip(1)} aria-label="Siguiente">
+              ›
+            </button>
+          </div>
+        </div>
+        {!available && (
+          <p className="music-hint">La música se activará cuando estén los archivos en /public/music</p>
+        )}
+      </div>
     </div>
   )
 }

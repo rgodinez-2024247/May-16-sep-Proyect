@@ -3,6 +3,7 @@ import { Background } from './components/Background'
 import { CharacterGifts, GiftModal } from './components/CharacterGifts'
 import { Entrance } from './components/Entrance'
 import { MusicPlayer } from './components/MusicPlayer'
+import { PuzzleGame } from './components/PuzzleGame'
 import { type CharacterGift } from './data/content'
 
 export default function App() {
@@ -32,8 +33,8 @@ export default function App() {
         <div className="app-shell">
           <section className="hero cute-hero">
             <img
-              className="hero-deco"
-              src="/images/characters/hellokitty-walk.png"
+              className="hero-cat"
+              src="/images/hero-cat.png"
               alt=""
               aria-hidden
             />
@@ -50,6 +51,8 @@ export default function App() {
           </section>
 
           <CharacterGifts onOpen={setActiveGift} />
+
+          <PuzzleGame />
 
           <section className="section closing" id="cierre">
             <blockquote>Te quiero mi niña. Felices 23 May.</blockquote>

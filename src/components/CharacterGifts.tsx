@@ -131,7 +131,7 @@ export function CharacterGifts({
       <h2 className="section-title">Toca un personaje</h2>
       <p className="section-lead">Cada uno guarda un regalito para ti.</p>
 
-      <div className="char-grid">
+      <div className="char-row">
         {characters.map((ch) => (
           <button
             key={ch.id}
@@ -141,8 +141,6 @@ export function CharacterGifts({
             aria-label={`${ch.name}: ${ch.giftLabel}`}
           >
             <img src={ch.src} alt={ch.name} />
-            <span className="char-name">{ch.name}</span>
-            <span className="char-gift">{ch.giftLabel}</span>
           </button>
         ))}
       </div>

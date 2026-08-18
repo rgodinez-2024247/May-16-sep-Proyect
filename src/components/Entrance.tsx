@@ -7,20 +7,53 @@ type Props = {
 
 export function Entrance({ open, onOpen }: Props) {
   const noRef = useRef<HTMLButtonElement>(null)
+  const lastDodge = useRef(0)
 
-  const dodgeNo = () => {
+  const dodgeNo = (event?: { clientX: number; clientY: number }) => {
     const btn = noRef.current
     if (!btn) return
+
+    const now = performance.now()
+    if (now - lastDodge.current < 70) return
+    lastDodge.current = now
+
+    const rect = btn.getBoundingClientRect()
+    const w = rect.width
+    const h = rect.height
     const pad = 16
-    const w = btn.offsetWidth
-    const h = btn.offsetHeight
     const maxX = Math.max(pad, window.innerWidth - w - pad)
     const maxY = Math.max(pad, window.innerHeight - h - pad)
-    const x = pad + Math.random() * (maxX - pad)
-    const y = pad + Math.random() * (maxY - pad)
+    const cx = event?.clientX ?? rect.left + w / 2
+    const cy = event?.clientY ?? rect.top + h / 2
+
+    let x = rect.left
+    let y = rect.top
+    for (let i = 0; i < 16; i++) {
+      const nx = pad + Math.random() * Math.max(1, maxX - pad)
+      const ny = pad + Math.random() * Math.max(1, maxY - pad)
+      const fromCursor = Math.hypot(nx + w / 2 - cx, ny + h / 2 - cy)
+      const fromPrev = Math.hypot(nx - rect.left, ny - rect.top)
+      if (fromCursor > 150 && fromPrev > 90) {
+        x = nx
+        y = ny
+        break
+      }
+      x = nx
+      y = ny
+    }
+
+    btn.style.position = 'fixed'
+    btn.style.margin = '0'
+    btn.style.zIndex = '90'
+    btn.style.opacity = '1'
+    btn.style.visibility = 'visible'
+    btn.style.left = `${rect.left}px`
+    btn.style.top = `${rect.top}px`
     btn.classList.add('is-dodging')
-    btn.style.left = `${x}px`
-    btn.style.top = `${y}px`
+    requestAnimationFrame(() => {
+      btn.style.left = `${x}px`
+      btn.style.top = `${y}px`
+    })
   }
 
   return (
@@ -55,16 +88,19 @@ export function Entrance({ open, onOpen }: Props) {
             ref={noRef}
             type="button"
             className="choice-btn choice-no"
-            onMouseEnter={dodgeNo}
+            onMouseEnter={(e) => dodgeNo(e.nativeEvent)}
+            onPointerMove={(e) => dodgeNo(e.nativeEvent)}
             onTouchStart={(e) => {
               e.preventDefault()
-              dodgeNo()
+              const t = e.touches[0]
+              dodgeNo(t)
             }}
-            onFocus={dodgeNo}
-            onClick={(e) => {
+            onFocus={() => dodgeNo()}
+            onPointerDown={(e) => {
               e.preventDefault()
-              dodgeNo()
+              dodgeNo(e.nativeEvent)
             }}
+            onClick={(e) => e.preventDefault()}
           >
             No
           </button>

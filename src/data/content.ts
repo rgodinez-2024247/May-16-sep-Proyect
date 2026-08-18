@@ -107,42 +107,28 @@ export type CharacterGift = {
 /** Clickable characters that "deliver" gifts */
 export const characters: CharacterGift[] = [
   {
-    id: 'hellokitty',
-    name: 'Hello Kitty',
-    src: '/images/characters/hellokitty-gift.png',
-    giftLabel: 'Carta de cumpleaños',
-    kind: 'letter',
-    letterId: 'birthday',
-  },
-  {
-    id: 'mymelody',
-    name: 'My Melody',
-    src: '/images/characters/mymelody.png',
+    id: 'cinnamoroll',
+    name: 'Cinnamoroll',
+    src: '/images/characters/cinnamoroll-party.png',
     giftLabel: 'Por qué te elijo',
     kind: 'letter',
     letterId: 'choose',
   },
   {
+    id: 'hellokitty',
+    name: 'Hello Kitty',
+    src: '/images/characters/hellokitty-party.png',
+    giftLabel: 'Carta de cumpleaños',
+    kind: 'letter',
+    letterId: 'birthday',
+  },
+  {
     id: 'kuromi',
     name: 'Kuromi',
-    src: '/images/characters/kuromi.png',
+    src: '/images/characters/kuromi-party.png',
     giftLabel: 'Para nuestro futuro',
     kind: 'letter',
     letterId: 'future',
-  },
-  {
-    id: 'cinnamoroll',
-    name: 'Cinnamoroll',
-    src: '/images/characters/cinnamoroll.png',
-    giftLabel: 'Mis pinturas',
-    kind: 'paintings',
-  },
-  {
-    id: 'badtzmaru',
-    name: 'Badtz-Maru',
-    src: '/images/characters/badtzmaru.png',
-    giftLabel: 'Los consentidos',
-    kind: 'cats',
   },
 ]
 
