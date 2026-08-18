@@ -6,6 +6,7 @@ import {
   paintings,
   type CharacterGift,
 } from '../data/content'
+import { LetterRoses } from './LetterRoses'
 
 type Props = {
   gift: CharacterGift | null
@@ -49,24 +50,15 @@ export function GiftModal({ gift, onClose }: Props) {
         onClick={onClose}
       >
         <div className="letter-stage" onClick={(e) => e.stopPropagation()}>
-          <img
-            className="letter-flowers letter-flowers-top"
-            src="/images/letter-flowers-top.png"
-            alt=""
-            aria-hidden
-          />
-          <img
-            className="letter-flowers letter-flowers-bot"
-            src="/images/letter-flowers-bot.png"
-            alt=""
-            aria-hidden
-          />
+          <div className="letter-frame">
+            <LetterRoses />
 
-          <article className="letter-paper">
-            <p className="letter-paper-from">{gift.name} te trae…</p>
-            <h3 className="letter-paper-title">{letter.title}</h3>
-            <div className="letter-paper-body">{letter.body}</div>
-          </article>
+            <article className="letter-paper">
+              <p className="letter-paper-from">{gift.name} te trae…</p>
+              <h3 className="letter-paper-title">{letter.title}</h3>
+              <div className="letter-paper-body">{letter.body}</div>
+            </article>
+          </div>
 
           <button type="button" className="letter-close soft" onClick={onClose}>
             Cerrar carta

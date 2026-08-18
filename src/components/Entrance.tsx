@@ -11,15 +11,16 @@ export function Entrance({ open, onOpen }: Props) {
   const dodgeNo = () => {
     const btn = noRef.current
     if (!btn) return
-    const parent = btn.parentElement
-    if (!parent) return
-    const bounds = parent.getBoundingClientRect()
-    const btnBox = btn.getBoundingClientRect()
-    const maxX = Math.max(0, bounds.width - btnBox.width)
-    const maxY = Math.max(0, 40)
-    const x = Math.random() * maxX - maxX / 2
-    const y = Math.random() * maxY
-    btn.style.transform = `translate(${x}px, ${y}px)`
+    const pad = 16
+    const w = btn.offsetWidth
+    const h = btn.offsetHeight
+    const maxX = Math.max(pad, window.innerWidth - w - pad)
+    const maxY = Math.max(pad, window.innerHeight - h - pad)
+    const x = pad + Math.random() * (maxX - pad)
+    const y = pad + Math.random() * (maxY - pad)
+    btn.classList.add('is-dodging')
+    btn.style.left = `${x}px`
+    btn.style.top = `${y}px`
   }
 
   return (
@@ -55,8 +56,15 @@ export function Entrance({ open, onOpen }: Props) {
             type="button"
             className="choice-btn choice-no"
             onMouseEnter={dodgeNo}
+            onTouchStart={(e) => {
+              e.preventDefault()
+              dodgeNo()
+            }}
             onFocus={dodgeNo}
-            onClick={dodgeNo}
+            onClick={(e) => {
+              e.preventDefault()
+              dodgeNo()
+            }}
           >
             No
           </button>
