@@ -25,7 +25,7 @@ export default function App() {
 
       {showVeil && (
         <div className="opening-veil" aria-hidden>
-          <p>Hola, Baby… esto es solo para ti.</p>
+          <p>Hola Baby, esto es solo para ti. {'=}'}</p>
         </div>
       )}
 
