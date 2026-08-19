@@ -301,3 +301,8 @@ git log --oneline        # ver los commits
 git checkout <hash>      # ver cómo estaba en ese momento
 git checkout main        # regresar
 ```
+
+---
+
+Los diagramas Mermaid de ejemplo que estaban en este archivo se movieron a
+[`docs/mermaid-ejemplos.md`](docs/mermaid-ejemplos.md).
