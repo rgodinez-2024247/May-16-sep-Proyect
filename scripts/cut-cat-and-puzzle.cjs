@@ -190,7 +190,11 @@ async function cutPuzzle() {
 }
 
 async function main() {
-  await cutCat()
+  if (fs.existsSync('public/images/hero-cat-src.png')) {
+    await cutCat()
+  } else {
+    console.log('hero-cat-src.png missing, keeping current hero cat')
+  }
   await cutPuzzle()
 }
 

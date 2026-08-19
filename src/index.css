@@ -5,8 +5,8 @@
   --rose-300: #e8a8bc;
   --rose-400: #d47a96;
   --rose-500: #c45a72;
-  --ink: #2a2226;
-  --ink-soft: #5a4a52;
+  --ink: #6b2647;
+  --ink-soft: #8f5f75;
   --blue: #8a9bb8;
   --blue-deep: #5f738f;
   --red-dot: #e23d4a;
@@ -634,7 +634,7 @@ p {
   font-family: var(--font-display);
   font-size: 1.08rem;
   line-height: 1.65;
-  color: #4a2f2c;
+  color: #5b3049;
 }
 
 .letter-close.soft {
@@ -919,16 +919,34 @@ p {
 
 .puzzle-done {
   position: absolute;
-  inset: auto 8% 8%;
+  left: 50%;
+  bottom: -1.15rem;
+  transform: translateX(-50%);
   z-index: 5;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.35rem;
-  color: #7a3144;
-  background: rgba(255, 250, 248, 0.88);
+  margin: 0;
+  font-family: var(--font-puffy);
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  color: #c45a72;
+  background: #fffaf8;
+  border: 2px solid #f4c9d6;
   border-radius: 999px;
-  padding: 0.35rem 0.9rem;
+  padding: 0.3rem 1.1rem;
+  box-shadow: 0 8px 18px rgba(154, 61, 77, 0.18);
   pointer-events: none;
+  animation: yupi-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes yupi-pop {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
 }
 
 .puzzle-tray {

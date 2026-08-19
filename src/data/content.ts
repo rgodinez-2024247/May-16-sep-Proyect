@@ -123,9 +123,9 @@ export const characters: CharacterGift[] = [
     letterId: 'birthday',
   },
   {
-    id: 'kuromi',
-    name: 'Kuromi',
-    src: '/images/characters/kuromi-party.png',
+    id: 'chococat',
+    name: 'Chococat',
+    src: '/images/characters/chococat-party.png',
     giftLabel: 'Para nuestro futuro',
     kind: 'letter',
     letterId: 'future',

@@ -156,7 +156,7 @@ export function PuzzleGame() {
         style={{ aspectRatio: `${puzzle.boardWidth} / ${puzzle.boardHeight}` }}
       >
         {pieces.map((p) => renderPiece(p.id, 'board'))}
-        {done && <p className="puzzle-done">Lo armaste, mi niña.</p>}
+        {done && <p className="puzzle-done">Yupiii</p>}
       </div>
 
       <div className="puzzle-tray">
