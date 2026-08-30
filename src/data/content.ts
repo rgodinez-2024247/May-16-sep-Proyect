@@ -72,28 +72,7 @@ export const paintings = [
   },
 ] as const
 
-export const cats = [
-  {
-    id: 'arcadio',
-    name: 'Arcadio',
-    line: 'No sabe que sucede pero te desea feliz cumpleaños',
-    src: '/images/cat-arcadio.png',
-  },
-  {
-    id: 'oso',
-    name: 'Oso',
-    line: 'Si tú fueras un gato :3',
-    src: '/images/cat-oso.png',
-  },
-  {
-    id: 'fuhrer',
-    name: 'Fuhrer',
-    line: 'Fuh(crimenes de guerra)rer',
-    src: '/images/cat-fuhrer.png',
-  },
-] as const
-
-export type GiftKind = 'letter' | 'paintings' | 'cats'
+export type GiftKind = 'letter' | 'paintings'
 
 export type CharacterGift = {
   id: string
