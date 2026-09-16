@@ -6,16 +6,15 @@ export const letters = [
     title: 'Feliz cumpleaños',
     body: `May, mi cielo:
 
-Hoy quiero detener un poquito el mundo solo para decirte esto: feliz cumpleaños. Felices 23, Marjorie. Ojalá este día te abrace con la misma suavidad con la que tú ablandas mis días.
+Feliz cumpleaños. Felices 23, Marjorie. Ojalá este día te abrace con la misma suavidad con la que tú ablandas mis días.
 
-Te deseo un precioso día, mi niña: que te celebren y canten tu happy birthday, y que te lleven del pastel que tanto te gusta. Quiero que sepas que pensé en ti con cariño de verdad. Pensé en tu sonrisa, en cómo dices las cosas, en lo linda que se te pone la mirada cuando algo te gusta. Pensé en llamarte Baby, princess, mi niña… y en que todos esos nombres caben en ti porque eres muchas cosas bonitas a la vez.
+Te deseo un precioso día, mi niña: que te celebren y canten tu happy birthday, y que te lleven del pastel que tanto te gusta.
 
-Esta página, estas cartas y todo lo que vas a ver no son un regalo perfecto; son un pedacito de lo que siento, acomodado con paciencia para ti. Quise que tuvieras algo tuyo, algo que pudieras abrir cuando quisieras y sentir que alguien te celebra de verdad.
+Esta página, estas cartas y todo lo que vas a ver lo hice especialmente para ti, son un pedacito de lo que siento, acomodado para ti. Quise que tuvieras algo tuyo, algo que pudieras abrir cuando quisieras.
 
-Hermosa, gracias por cumplir años cerca de mi vida. Que este 16 de septiembre te trate con ternura. Te mereces flores, calma, risas y la certeza de que eres profundamente querida.
+Que este 16 de septiembre te trate con ternura. Te mereces flores, calma, risas y la certeza de que eres profundamente querida mi niña hermosa.
 
-Con todo mi cariño,
-tu niño que te celebra`,
+Con todo mi cariño. =}`,
   },
   {
     id: 'choose',
@@ -109,11 +108,11 @@ export const characters: CharacterGift[] = [
 
 export const songs = [
   { id: 'loco', title: 'Loco (tu forma de ser)', file: '/music/loco.mp3' },
-  { id: 'really', title: 'Really', file: '/music/really.mp3' },
+  { id: 'far', title: 'Far', file: '/music/far.mp3' },
   { id: 'falling', title: 'Falling in Love', file: '/music/falling-in-love.mp3' },
-  { id: 'guns', title: 'Guns for Hands', file: '/music/guns-for-hands.mp3' },
+  { id: 'k', title: 'K.', file: '/music/k.mp3' },
   { id: 'fade', title: 'Fade Into You', file: '/music/fade-into-you.mp3' },
-  { id: 'jungle', title: 'Jungle', file: '/music/jungle.mp3' },
+  { id: 'nothing', title: "Nothing's Gonna Hurt You Baby", file: '/music/nothing-s-gonna-hurt-you-baby.mp3' },
   { id: 'japan', title: 'Made in Japan', file: '/music/made-in-japan.mp3' },
-  { id: 'futuro', title: 'Ella viene del futuro', file: '/music/ella-viene-del-futuro.mp3' },
+  { id: 'apocalypse', title: 'Apocalypse', file: '/music/apocalypse.mp3' },
 ] as const
