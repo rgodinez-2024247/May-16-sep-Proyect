@@ -28,16 +28,14 @@ Te elijo porque me haces sentir en casa sin pedirme que sea alguien más. Te eli
 
 Linda, no te elijo solo en los días bonitos. También en los callados, en los cansados, en los que no salen perfectos. Te elijo porque quiero aprender a quererte mejor, con paciencia y verdad. Porque cuando digo “May” o “cielo”, no es costumbre: es reconocimiento. Eres alguien a quien admiro, deseo cuidar y con quien quiero seguir construyendo momentos simples que se sienten grandes.
 
-Mi lindura gracias por existir en mi vida con tu tan única y hermosa forma de ser tan tuya. Elegirte no es un impulso, es una decisión que tomo todos los días con tanta alegría y gusto =>
+Mi lindura gracias por existir en mi vida con tu tan única y hermosa forma de ser tan tuya. Elegirte no es un impulso, es una decisión que tomo todos los días con tanta alegría y gusto.
 
-Con amor, Rigo
+Con amor, Rigo`,
   },
   {
     id: 'future',
     title: 'Para nuestro futuro',
-    body: `Baby, mi niña:
-
-Mi niña hermosa:
+    body: `Mi niña hermosa:
 
 No sé como seran tus dias siempre pero sí sé que estare contigo a tu lado, apoyandote cada vez que lo necesites, o aunque no lo hagas, yo te apoyare, quiero seguir creando memorias contigo, no dudes en que protegere cada uno de tus sentimientos sin importar que.
 
@@ -45,7 +43,7 @@ Quiero crear más memorias contigo, reirnos de las tonterias o bromas que nos ha
 
 Quiero escucharte hablar siempre, de lo que quieras, escucharte reir y ver esa hermosa sonrisa tuya cada vez que pueda, hacerte feliz, hacerte sentir tranquila, que todo estara bien, sin estres, sin problemas, solo tú y yo, abrazaditos o hablando de cualquier cosa.
 
-Con aprecio, your boy =>
+Con aprecio, your boy`,
   },
 ] as const
 
