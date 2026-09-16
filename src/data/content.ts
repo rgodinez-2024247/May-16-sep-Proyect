@@ -28,26 +28,24 @@ Te elijo porque me haces sentir en casa sin pedirme que sea alguien más. Te eli
 
 Linda, no te elijo solo en los días bonitos. También en los callados, en los cansados, en los que no salen perfectos. Te elijo porque quiero aprender a quererte mejor, con paciencia y verdad. Porque cuando digo “May” o “cielo”, no es costumbre: es reconocimiento. Eres alguien a quien admiro, deseo cuidar y con quien quiero seguir construyendo momentos simples que se sienten grandes.
 
-Bella, gracias por existir en mi vida con esa manera tuya tan tuya. Elegirte no es un impulso: es una decisión que repito con gusto.
+Mi lindura gracias por existir en mi vida con tu tan única y hermosa forma de ser tan tuya. Elegirte no es un impulso, es una decisión que tomo todos los días con tanta alegría y gusto =>
 
-Siempre,
-quien te mira y te elige`,
+Con amor, Rigo
   },
   {
     id: 'future',
     title: 'Para nuestro futuro',
     body: `Baby, mi niña:
 
-No sé exactamente cómo se verán todos nuestros mañanas, y no quiero fingir que lo sé. Lo que sí quiero es dejarte esta promesa suave: quiero estar, crecer y aprender a tu lado.
+Mi niña hermosa:
 
-Sueño con risas compartidas, con mensajes tontos a deshora, con días normales que se vuelven especiales solo porque estamos juntos. Sueño con cuidarnos, con celebrarnos, con ser refugio el uno del otro cuando el mundo pese un poco. No te pido prisa ni respuestas grandes; solo quiero que sepas que mi intención es buena, constante y cariñosa.
+No sé como seran tus dias siempre pero sí sé que estare contigo a tu lado, apoyandote cada vez que lo necesites, o aunque no lo hagas, yo te apoyare, quiero seguir creando memorias contigo, no dudes en que protegere cada uno de tus sentimientos sin importar que.
 
-Princess, ojalá en el futuro sigamos teniendo motivos para sonreírnos. Que haya más cartas, más flores, más música y más tardes en las que lo único urgente sea querernos bien. Espero seguir viendo esa sonrisa hermosa y escuchar tu voz, May, mi niña hermosa.
+Quiero crear más memorias contigo, reirnos de las tonterias o bromas que nos hagamos, escribirte más cartas, hacerte detalles, darte flores, seguir conociendote, amarte cada día, besarte, sostenerte, abrazarte hasta quedar con el aroma a tú splash, que sepas que cuentas conmigo en todo lo que hagas y decidas.
 
-Marjorie, si este regalo llega un poquito antes de tu día, que también te acompañe después: como un recordatorio de que alguien piensa en ti con ilusión de futuro.
+Quiero escucharte hablar siempre, de lo que quieras, escucharte reir y ver esa hermosa sonrisa tuya cada vez que pueda, hacerte feliz, hacerte sentir tranquila, que todo estara bien, sin estres, sin problemas, solo tú y yo, abrazaditos o hablando de cualquier cosa.
 
-Con ternura,
-el que quiere caminar contigo`,
+Con aprecio, your boy =>
   },
 ] as const
 
