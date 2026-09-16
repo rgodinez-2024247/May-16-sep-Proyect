@@ -204,7 +204,7 @@ May-16-sep-Proyect/
     ├── App.tsx                   arma la página completa
     ├── index.css                 TODOS los estilos
     ├── data/
-    │   ├── content.ts            cartas, personajes, canciones, pinturas, gatos
+    │   ├── content.ts            cartas, personajes, canciones, pinturas
     │   └── puzzle.ts             posición y tamaño de cada pieza (generado)
     └── components/
         ├── Entrance.tsx          pantalla de entrada y el botón "No" que huye
@@ -241,9 +241,9 @@ Los colores principales están arriba de `src/index.css`:
 --ink-soft: #8f5f75;   /* ciruela suave de los subtítulos */
 ```
 
-**Nota:** en `content.ts` siguen existiendo `paintings` (las pinturas) y `cats` (Arcadio, Oso y
-Fuhrer). Están completos pero a propósito ningún personaje los abre, así que no se ven en la
-página. Si algún día los quieres de vuelta, hay que agregar un personaje que los muestre.
+**Nota:** en `content.ts` sigue existiendo `paintings` (las pinturas). Está completo pero a
+propósito ningún personaje lo abre, así que no se ve en la página. Si algún día lo quieres de
+vuelta, hay que agregar un personaje que lo muestre.
 
 ---
 

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import {
   characters,
-  cats,
   letters,
   paintings,
   type CharacterGift,
@@ -93,20 +92,6 @@ export function GiftModal({ gift, onClose }: Props) {
                 <figcaption>
                   <strong>{p.title}</strong>
                   <span>{p.caption}</span>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        )}
-
-        {gift.kind === 'cats' && (
-          <div className="gift-cat-grid">
-            {cats.map((cat) => (
-              <figure key={cat.id}>
-                <img src={cat.src} alt={cat.name} />
-                <figcaption>
-                  <strong>{cat.name}</strong>
-                  <span>{cat.line}</span>
                 </figcaption>
               </figure>
             ))}
